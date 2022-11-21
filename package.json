@@ -7,7 +7,7 @@
     "dev": "vite",
     "build": "tsc && vite build",
     "preview": "vite preview",
-    "server": "json-server -w -d 1000 -p 3333 ./server.ts"
+    "server": "json-server -d 1000 -p 3333 -w ./server.ts"
   },
   "dependencies": {
     "axios": "^1.1.3",
@@ -17,6 +17,7 @@
   },
   "devDependencies": {
     "@faker-js/faker": "^7.6.0",
+    "@types/json-server": "^0.14.4",
     "@types/node": "^18.11.9",
     "@types/react": "^18.0.24",
     "@types/react-dom": "^18.0.8",
