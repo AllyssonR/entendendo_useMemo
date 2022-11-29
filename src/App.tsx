@@ -1,20 +1,19 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Users } from "./Components/Users";
 import { FormEvent } from "react";
-type UsersProps = {
-  id: number;
-  name: string;
-  email: string;
-};
+import { api } from "./services/api";
+import { User } from "./types/user";
+
 export function App() {
   const [filter, setFilter] = useState("");
-  const [users, setUsers] = useState<UsersProps[]>([]);
+  const [users, setUsers] = useState<User[]>([]);
   async function handleSubmit(e: FormEvent) {
     e.preventDefault();
     const response = await fetch(`http://localhost:3333/users?q=${filter}`);
     const data = await response.json();
     setUsers(data);
   }
+
   return (
     <div>
       <h1>Usuarios</h1>

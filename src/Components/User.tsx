@@ -1,13 +1,21 @@
-export type UserProps = {
-  id: number;
-  name: string;
-  email: string;
-};
+import { memo } from "react";
+import { User as UserComponentprops } from "../types/user";
 
-export function User({ id, name, email }: UserProps) {
+function UserComponent({
+  id,
+  name,
+  email,
+  birthdate,
+  address,
+}: UserComponentprops) {
   return (
     <li>
-      id:{id} || name:{name} || email:{email}
+      <>
+        Id: {id} | Nome: {name} | E-mail: {email} | aniversario: {birthdate} |
+        Endereço: {address}
+      </>
     </li>
   );
 }
+
+export const User = memo(UserComponent);
