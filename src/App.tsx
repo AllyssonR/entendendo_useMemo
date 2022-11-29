@@ -11,7 +11,7 @@ export function App() {
   const [users, setUsers] = useState<UsersProps[]>([]);
   async function handleSubmit(e: FormEvent) {
     e.preventDefault();
-    const response = await fetch(`http://localhost:3333//${filter}`);
+    const response = await fetch(`http://localhost:3333/users?q=${filter}`);
     const data = await response.json();
     setUsers(data);
   }
