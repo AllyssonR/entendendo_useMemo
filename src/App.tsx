@@ -1,7 +1,6 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { Users } from "./Components/Users";
 import { FormEvent } from "react";
-import { api } from "./services/api";
 import { User } from "./types/user";
 
 export function App() {
