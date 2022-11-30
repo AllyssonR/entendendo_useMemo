@@ -15,7 +15,7 @@ export function App() {
 
   return (
     <div>
-      <h1>Usuarios</h1>
+      <h1>UserDash</h1>
       <form onSubmit={handleSubmit}>
         <input
           type="text"
@@ -23,7 +23,7 @@ export function App() {
           onChange={(e) => setFilter(e.target.value)}
         />
         &nbsp;
-        <button type="submit">Procurar</button>
+        <button type="submit">Filtrar</button>
       </form>
       <Users users={users} />
     </div>

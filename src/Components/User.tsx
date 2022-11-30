@@ -10,10 +10,8 @@ function UserComponent({
 }: UserComponentprops) {
   return (
     <li>
-      <>
-        Id: {id} | Nome: {name} | E-mail: {email} | aniversario: {birthdate} |
-        Endereço: {address}
-      </>
+      Id: {id} | Nome:{name} | E-mail:{email} | Data de nascimento:{birthdate} |
+      pais:{address.country} estado:{address.state} rua:{address.street}
     </li>
   );
 }
