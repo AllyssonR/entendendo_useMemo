@@ -15,18 +15,18 @@ export function App() {
 
   return (
     <div className="mainPage">
-      <h1>UserDash</h1>
+      <div className="header">
+        <h1>UserDash</h1>
+      </div>
 
       <form onSubmit={handleSubmit}>
-        <div className="header">
-          <input
-            type="text"
-            value={filter}
-            onChange={(e) => setFilter(e.target.value)}
-          />
-          &nbsp;
-          <button type="submit">Filtrar</button>
-        </div>
+        <input
+          type="text"
+          value={filter}
+          onChange={(e) => setFilter(e.target.value)}
+        />
+        &nbsp;
+        <button type="submit">Filtrar</button>
       </form>
       <Users users={users} />
     </div>
