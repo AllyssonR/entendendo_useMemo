@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Users } from "./Components/Users";
 import { FormEvent } from "react";
 import { User } from "./types/user";
-
+import "./styles/app.scss";
 export function App() {
   const [filter, setFilter] = useState("");
   const [users, setUsers] = useState<User[]>([]);
@@ -14,16 +14,19 @@ export function App() {
   }
 
   return (
-    <div>
+    <div className="mainPage">
       <h1>UserDash</h1>
+
       <form onSubmit={handleSubmit}>
-        <input
-          type="text"
-          value={filter}
-          onChange={(e) => setFilter(e.target.value)}
-        />
-        &nbsp;
-        <button type="submit">Filtrar</button>
+        <div className="header">
+          <input
+            type="text"
+            value={filter}
+            onChange={(e) => setFilter(e.target.value)}
+          />
+          &nbsp;
+          <button type="submit">Filtrar</button>
+        </div>
       </form>
       <Users users={users} />
     </div>
