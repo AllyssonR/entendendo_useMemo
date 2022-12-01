@@ -3,14 +3,14 @@ module.exports = () => {
   const data = {
     users: [],
   };
-  for (let i=1; i < 2000; i++) {
+  for (let i = 1; i < 2; i++) {
     data.users.push({
       id: i,
       name: faker.faker.name.fullName(),
       email: faker.faker.internet.email(),
       birthdate: faker.faker.date.past(),
       phone: faker.faker.phone.number(),
-      image: faker.faker.image.avatar(),
+      image: faker.faker.image.people(),
       address: {
         country: faker.faker.address.country(),
         state: faker.faker.address.state(),
@@ -21,4 +21,3 @@ module.exports = () => {
   }
   return data;
 };
-

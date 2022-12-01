@@ -1,0 +1,13 @@
+.card{
+  width: 300px;
+  height: 229px;
+  display: flex;
+    align-items: center;
+    justify-content: space-around;
+    .userInfo{
+      display: grid;
+      grid-template-columns: 1fr;
+      
+    }
+
+}

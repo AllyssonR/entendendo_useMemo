@@ -3,6 +3,8 @@ export interface User {
   name: string;
   email: string;
   birthdate: string;
+  phone:string;
+  image:string;
   address: {
     country: string;
     state: string;

@@ -3,6 +3,7 @@ import { Users } from "./Components/Users";
 import { FormEvent } from "react";
 import { User } from "./types/user";
 import "./styles/app.scss";
+import "./styles/global.scss";
 export function App() {
   const [filter, setFilter] = useState("");
   const [users, setUsers] = useState<User[]>([]);

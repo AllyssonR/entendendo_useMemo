@@ -1,5 +1,6 @@
 import { User } from "./User";
 import { User as UserType } from "../types/user";
+import'../styles/users.scss'
 type UserProps = {
   users: UserType[];
 };
