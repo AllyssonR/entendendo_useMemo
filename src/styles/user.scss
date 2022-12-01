@@ -1,13 +1,51 @@
-.card{
+.perfil {
+  display: flex;
+  gap: 1rem;
+  padding: 1rem;
+  align-items: center;
+  img {
+    width: 4rem;
+    height: 4rem;
+    border-radius: 30px;
+  }
+}
+.card {
   width: 300px;
   height: 229px;
   display: flex;
-    align-items: center;
-    justify-content: space-around;
-    .userInfo{
+  border-radius: 10px;
+  background-color: var(--blue-700);
+  font-weight: 300;
+  flex-direction: column;
+
+  .userInfo {
+    display: grid;
+    grid-template-columns: 1fr;
+    color: var(--gray-100);
+    font-weight: 300;
+    h1 {
+      font-size: 1rem;
+      font-weight: 300;
+    }
+    h2 {
+      font-size: 0.75rem;
+      font-weight: 300;
+    }
+  }
+  .userLocation {
+    p {
+      color: var(--gray-100);
       display: grid;
       grid-template-columns: 1fr;
-      
+      padding-left: 19px;
+      line-height: 9px;
+      gap: 2px;
     }
-
+    span {
+      font-size: 8px;
+      font-weight: 300;
+      color: var(--gray-500);
+      line-height: 14px;
+    }
+  }
 }

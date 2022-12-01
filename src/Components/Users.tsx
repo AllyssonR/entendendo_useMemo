@@ -1,6 +1,6 @@
 import { User } from "./User";
 import { User as UserType } from "../types/user";
-import'../styles/users.scss'
+import "../styles/users.scss";
 type UserProps = {
   users: UserType[];
 };
@@ -15,6 +15,8 @@ export function Users({ users }: UserProps) {
           email={user.email}
           address={user.address}
           birthdate={user.birthdate}
+          image={user.image}
+          phone={user.phone}
         />
       ))}
     </ul>
