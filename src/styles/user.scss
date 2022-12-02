@@ -17,6 +17,7 @@
   background-color: var(--blue-700);
   font-weight: 300;
   flex-direction: column;
+  overflow: hidden;
 
   .userInfo {
     display: grid;
@@ -33,19 +34,29 @@
     }
   }
   .userLocation {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
     p {
       color: var(--gray-100);
       display: grid;
       grid-template-columns: 1fr;
       padding-left: 19px;
       line-height: 9px;
-      gap: 2px;
     }
     span {
       font-size: 8px;
-      font-weight: 300;
+      font-weight: 400;
       color: var(--gray-500);
       line-height: 14px;
+    }
+  }
+  &:focus {
+    a {
+      background: var(--blue-500);
+      width: 100%;
+      padding: 9px;
+      margin-top: 18px;
     }
   }
 }

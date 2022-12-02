@@ -3,7 +3,7 @@ module.exports = () => {
   const data = {
     users: [],
   };
-  for (let i = 1; i < 2; i++) {
+  for (let i = 1; i < 7; i++) {
     data.users.push({
       id: i,
       name: faker.faker.name.fullName(),
